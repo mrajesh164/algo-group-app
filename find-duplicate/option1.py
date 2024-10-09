@@ -16,10 +16,10 @@ from typing import List
 def findDuplicate_one(input: List[int]) -> int:
     s: set[int] = set()
     for num in input:
-    	if num not in s:
+        if num not in s:
 	    s.add(num)
-	else:
-	    return num
+        else:
+            return num
     return -1
 
 # For the second function, I used the bitwise XOR operator to find the first 
