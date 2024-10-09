@@ -1,6 +1,6 @@
 import pytest
-from option1.py import findDuplicate_one
-from option1.py import findDuplicate_two
+from option1 import findDuplicate_one
+from option1 import findDuplicate_two
 
 t1 = []
 t2 = [1]
