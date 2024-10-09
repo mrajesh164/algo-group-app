@@ -32,6 +32,7 @@ def findDuplicate_two(input: List[int]) -> int:
     for num in input[1:]:
         if x ^ num == 0:
             return num
+        x = num
     return -1
 
 # I am not completely sure of the exact time/space complexity, but I believe my 
