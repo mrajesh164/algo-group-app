@@ -17,7 +17,7 @@ def findDuplicate_one(input: List[int]) -> int:
     s: set[int] = set()
     for num in input:
         if num not in s:
-	    s.add(num)
+            s.add(num)
         else:
             return num
     return -1
@@ -27,11 +27,11 @@ def findDuplicate_one(input: List[int]) -> int:
 # returns -1. 
 def findDuplicate_two(input: List[int]) -> int:
     if len(input) == 0:
-	return -1
+        return -1
     x: int = input[0]
     for num in input[1:]:
-	if x ^ num == 0:
-	    return num
+        if x ^ num == 0:
+            return num
     return -1
 
 # I am not completely sure of the exact time/space complexity, but I believe my 
