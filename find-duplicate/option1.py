@@ -22,21 +22,22 @@ def findDuplicate_one(input: List[int]) -> int:
             return num
     return -1
 
-# For the second function, I used the bitwise XOR operator to find the first 
-# duplicate integer when the XOR returns 0. If there is no duplicate, the function 
-# returns -1. 
+# For the second function, I sorted the list, then went through it in order 
+# until I found a duplicate integer. If there is no duplicate, the function
+# returns -1.  
 def findDuplicate_two(input: List[int]) -> int:
     if len(input) == 0:
         return -1
     input.sort()
     for i, num in enumerate(input[1:]):
-        if input[i - 1] == num:
+        if num == input[i]:
             return num
     return -1    
 
-# I am not completely sure of the exact time/space complexity, but I believe my 
-# first implementation has a higher time and space complexity because of my usage
-# of the set. In my second function, I don't use any data structure that takes 
-# up storage, so I think the time and space complexity are smaller. 
+# I am not completely sure of the exact time/space complexity, but I think my 
+# first function has a lower time complexity than my second function 
+# since I think python's sort algorithm uses more time. I think my first
+# function has a higher space complexity though, because I used a set
+# to track the integers. 
 
 
