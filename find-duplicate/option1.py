@@ -28,12 +28,11 @@ def findDuplicate_one(input: List[int]) -> int:
 def findDuplicate_two(input: List[int]) -> int:
     if len(input) == 0:
         return -1
-    x: int = 0
-    for num in input:
-        x ^= num
-        if x == 0:
+    input.sort()
+    for i, num in enumerate(input[1:]):
+        if input[i - 1] == num:
             return num
-    return -1
+    return -1    
 
 # I am not completely sure of the exact time/space complexity, but I believe my 
 # first implementation has a higher time and space complexity because of my usage
